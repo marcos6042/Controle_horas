@@ -4,6 +4,8 @@ import plotly.express as px
 from datetime import datetime, timedelta
 import sqlite3
 import hashlib
+import time
+import re
 
 # Configuração inicial do banco de dados
 def init_db():
@@ -293,9 +295,7 @@ def cadastrar_obra():
                 st.error(f"Erro ao cadastrar obra: {str(e)}")
             finally:
                 conn.close()
-# Funções similares para gerenciar_obra(), cadastrar_colaborador(),
-# gerenciar_colaborador(), etc.
-# [Continuo no próximo bloco devido ao limite de caracteres...]
+
 # Função para registrar tarefa com validações
 def registrar_tarefa():
     st.subheader("Registro de Tarefa")
